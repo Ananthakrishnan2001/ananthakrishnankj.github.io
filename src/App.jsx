@@ -24,7 +24,7 @@ function App() {
   const handleAdminLogout = () => { clearAdminSession(); setAdminAuthed(false); };
 
   return (
-    <Router>
+    <Router basename="/ananthakrishnankj.github.io">
       <Routes>
         <Route
           path="/"
