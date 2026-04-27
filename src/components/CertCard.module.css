@@ -1,0 +1,109 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.cardOpen {
+  border-color: rgba(200, 169, 110, 0.35);
+  box-shadow: 0 4px 20px rgba(200, 169, 110, 0.06);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+
+.header:hover {
+  background: rgba(200, 169, 110, 0.03);
+}
+
+.headerLeft { flex: 1; }
+
+.name {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.issuer {
+  font-size: 0.78rem;
+  color: var(--text2);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.chevron {
+  font-size: 0.75rem;
+  color: var(--text3);
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.body {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+}
+
+.bodyLabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.66rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.learnings {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.learnings li {
+  font-size: 0.85rem;
+  color: var(--text2);
+  padding-left: 1.3rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.learnings li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
+  top: 0.15rem;
+}

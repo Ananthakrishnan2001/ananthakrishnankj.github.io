@@ -1,0 +1,15 @@
+.tag {
+  font-size: 0.78rem;
+  color: var(--text2);
+  background: var(--bg3);
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.tag:hover {
+  border-color: rgba(200, 169, 110, 0.3);
+  color: var(--text);
+}

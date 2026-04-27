@@ -1,0 +1,225 @@
+{
+  "hero": {
+    "nameFirst": "Ananthakrishnan",
+    "nameLast": "KJ",
+    "tagline": "Available for opportunities",
+    "title": "Management Trainee · Baker Tilly ASA  |  ACCA Part-Qualified  |  Finance & Data",
+    "summary": "ACCA Part-Qualified professional (10/13 papers passed) with external audit experience at Baker Tilly ASA, contributing to financial statement audits for European clients across shipping, investment holding, and retail sectors. Skilled in financial data analysis, variance analysis, and management reporting, with hands-on experience building financial dashboards and reports in Power BI and Excel. Exposure to ledger-level data cleaning, structured financial documentation, and IFRS-based reporting. Keen to apply analytical and data visualisation skills in a Financial Planning & Analysis or Business Intelligence capacity.",
+    "relocateText": "🌍 Open to relocation and remote work globally — UAE · Cyprus · UK · Singapore",
+    "links": [
+      { "label": "✉ Hire Me", "url": "mailto:ananthakrishnankj7204@gmail.com", "primary": true },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/ananthakrishnan-kj", "primary": false },
+      { "label": "GitHub", "url": "https://github.com/Ananthakrishnan2001", "primary": false },
+      { "label": "Download CV", "url": "/Ananthakrishnan_KJ_CV_2026.pdf", "primary": false }
+    ]
+  },
+  "skills": [
+    {
+      "id": "sk-1",
+      "category": "Data & Visualisation",
+      "icon": "BarChart2",
+      "items": ["Power BI", "DAX", "Data Modelling", "Excel (Advanced)", "Pivot Tables", "Data Storytelling"]
+    },
+    {
+      "id": "sk-2",
+      "category": "Financial Analysis",
+      "icon": "TrendingUp",
+      "items": ["Variance Analysis", "Analytical Review", "Management Reporting", "IFRS", "Financial Statements", "Investment Appraisal", "Business Valuation", "Management Accounting"]
+    },
+    {
+      "id": "sk-3",
+      "category": "Audit & Assurance",
+      "icon": "Shield",
+      "items": ["External Audit", "ISA Compliance", "Substantive Testing", "Working Papers", "Risk Assessment", "Revenue Testing", "Cross-border Audit"]
+    },
+    {
+      "id": "sk-4",
+      "category": "Taxation & Compliance",
+      "icon": "FileText",
+      "items": ["Direct Taxation", "Indirect Taxation", "Corporate Law", "Regulatory Compliance"]
+    },
+    {
+      "id": "sk-5",
+      "category": "Automation & Data Engineering",
+      "icon": "Code2",
+      "items": ["Power Automate", "Python (Basic)", "Data Cleaning", "Ledger Reconciliation", "Structured Problem Solving"]
+    },
+    {
+      "id": "sk-6",
+      "category": "Languages",
+      "icon": "Globe",
+      "items": ["English", "Malayalam", "Hindi"]
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Management Trainee – Assurance",
+      "date": "Dec 2025 – Present",
+      "company": "Baker Tilly ASA · Global Offshoring Services",
+      "location": "Kochi, Kerala, India",
+      "partTime": false,
+      "bullets": [
+        "Contributed to financial statement audits for 9 European clients across shipping (4 ship-owning companies), investment holding (4 companies), and retail & franchise (Hans & Gretel), performing substantive procedures under IFRS and ISA frameworks.",
+        "Performed analytical review procedures including fluctuation analysis across revenue, expenses, and balance sheet accounts, identifying variances and unusual trends for escalation to senior reviewers.",
+        "Carried out data cleaning and sanitisation of detailed client ledgers, organising and validating large volumes of transactional data to support audit evidence and financial analysis.",
+        "Prepared audit working papers covering planning documentation, risk assessment, substantive testing, and audit evidence in accordance with ISA methodology across eight engagements.",
+        "Performed revenue and expense testing including vouching, tracing, cut-off testing, and recalculation to verify completeness, occurrence, and accuracy of financial statement balances."
+      ]
+    },
+    {
+      "id": "exp-2",
+      "role": "Clinic Manager (Part-Time)",
+      "date": "May 2024 – Oct 2025",
+      "company": "Dr. Hashik's MediClinic",
+      "location": "Kochi, Kerala, India",
+      "partTime": true,
+      "context": "Undertaken on a part-time basis alongside ACCA studies to build professional competencies in a real business environment.",
+      "bullets": [
+        "Developed patient-facing communication and client interaction skills in a healthcare setting, managing appointments and handling sensitive client queries with professionalism.",
+        "Applied data representation tools — Excel dashboards and Power BI reports — to track revenue, expenses, and operational KPIs, providing management with monthly performance visibility. Proprietary data and dashboards cannot be shared externally.",
+        "Managed billing operations, daily revenue reconciliation, and supplier account management, gaining practical exposure to end-to-end financial workflow management.",
+        "Oversaw stock monitoring and procurement tracking using structured data workflows, ensuring adequate inventory levels and minimising operational disruption."
+      ]
+    }
+  ],
+  "acca": {
+    "title": "ACCA Part-Qualified",
+    "subtitle": "Registered October 2023 · Appearing for SBL – June 2026",
+    "totalPassed": 10,
+    "totalPapers": 13,
+    "avgScore": 68.8,
+    "allFirstAttempt": true,
+    "status": "SBL — Jun 2026",
+    "specialMentions": ["SBR", "AAA", "AFM"],
+    "papers": [
+      { "code": "BT", "name": "Business and Technology", "level": "Knowledge", "status": "pending", "score": null, "attempt": null },
+      { "code": "MA", "name": "Management Accounting", "level": "Knowledge", "status": "passed", "score": null, "attempt": 1 },
+      { "code": "FA", "name": "Financial Accounting", "level": "Knowledge", "status": "passed", "score": null, "attempt": 1 },
+      { "code": "LW", "name": "Corporate & Business Law", "level": "Skills", "status": "pending", "score": null, "attempt": null },
+      { "code": "PM", "name": "Performance Management", "level": "Skills", "status": "passed", "score": null, "attempt": 1 },
+      { "code": "TX", "name": "Taxation", "level": "Skills", "status": "passed", "score": null, "attempt": 1, "note": "Highest Score" },
+      { "code": "FR", "name": "Financial Reporting", "level": "Skills", "status": "passed", "score": null, "attempt": 1 },
+      { "code": "AA", "name": "Audit and Assurance", "level": "Skills", "status": "passed", "score": null, "attempt": 1 },
+      { "code": "FM", "name": "Financial Management", "level": "Skills", "status": "passed", "score": null, "attempt": 1 },
+      { "code": "SBL", "name": "Strategic Business Leader", "level": "Strategic", "status": "upcoming", "score": null, "attempt": null, "note": "Jun 2026" },
+      { "code": "SBR", "name": "Strategic Business Reporting", "level": "Strategic", "status": "passed", "score": null, "attempt": 1 },
+      { "code": "AFM", "name": "Advanced Financial Management", "level": "Strategic", "status": "passed", "score": 56, "attempt": 1 },
+      { "code": "AAA", "name": "Advanced Audit & Assurance", "level": "Strategic", "status": "passed", "score": null, "attempt": 1 }
+    ]
+  },
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Sales Performance Dashboard",
+      "tags": ["Power BI", "DAX", "Excel"],
+      "description": "Interactive Power BI dashboard tracking revenue trends, product performance, and regional sales KPIs with dynamic filtering and drill-through capabilities.",
+      "details": "This interactive dashboard allows management to drill down into regional sales figures, spot underperforming products, and optimise inventory distribution. The DAX models ensure quick load times despite processing large volumes of transactional data. Built for a private company — client data is proprietary.",
+      "embedUrl": "",
+      "embedType": "powerbi",
+      "fileUrl": "",
+      "fileType": ""
+    },
+    {
+      "id": "proj-2",
+      "name": "Student Performance Dashboard",
+      "tags": ["Power BI", "Excel", "Analytics"],
+      "description": "Comprehensive analytics dashboard tracking student KPIs, attendance patterns, and performance trends to enable data-driven decisions for academic management.",
+      "details": "Tracking academic outcomes and attendance data in real-time, this dashboard acts as a central hub for educators to identify at-risk students and deploy timely interventions. Designed for scalability across multiple cohorts and subject areas.",
+      "embedUrl": "",
+      "embedType": "powerbi",
+      "fileUrl": "",
+      "fileType": ""
+    },
+    {
+      "id": "proj-3",
+      "name": "Automated Student Communication Workflow",
+      "tags": ["Power Automate", "Excel", "Outlook"],
+      "description": "Automated workflow distributing 500+ personalised emails with pagination logic, concurrency controls, and status-tracking to prevent duplicate communications.",
+      "details": "Replaced a manual 8-hour process with an automated workflow running in under 5 minutes. Logic includes pagination to address API row limitations, concurrency controls to prevent data file-locking issues, and a status-tracking mechanism to update records upon successful delivery — maintaining a reliable process audit trail.",
+      "embedUrl": "",
+      "embedType": "github",
+      "fileUrl": "",
+      "fileType": ""
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "Bachelor of Commerce – Accounting & Finance",
+      "institution": "Sree Narayana Guru Open University",
+      "date": "Sep 2023 – Sep 2026",
+      "status": "In Progress · 5th Semester",
+      "description": "Currently in 5th semester (4th semester completed). Building a strong academic foundation alongside professional ACCA qualification and work experience.",
+      "modules": ["Financial Accounting", "Taxation", "Business Law", "Management", "Cost Accounting"]
+    },
+    {
+      "id": "edu-2",
+      "degree": "AB in Psychology",
+      "institution": "University of Perpetual Help System DALTA, Philippines",
+      "date": "Jan 2021 – Sep 2022",
+      "status": "Completed",
+      "description": "Developed a strong analytical and behavioural foundation that enhances client interaction, professional communication, and structured problem-solving in finance and audit contexts.",
+      "modules": ["Behavioural Analysis", "Research Methods", "Cognitive Psychology", "Statistics"]
+    },
+    {
+      "id": "edu-3",
+      "degree": "Higher Secondary – Biology & Mathematics",
+      "institution": "Kendriya Vidyalaya Port Trust",
+      "date": "2017 – 2019",
+      "status": "Completed",
+      "description": "Developed strong quantitative reasoning and analytical skills through a rigorous mathematics curriculum.",
+      "modules": ["Mathematics", "Biology", "Chemistry", "Physics", "English"]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "Mock Audit Certificate",
+      "issuer": "WeGyde Pvt. Ltd.",
+      "date": "Feb 2026",
+      "learnings": [
+        "Applied ISA-based audit methodology in a fully simulated client engagement",
+        "Prepared complete audit working papers from planning through completion stage",
+        "Practised risk assessment procedures and substantive testing techniques",
+        "Developed professional scepticism in reviewing financial statement assertions",
+        "Experienced end-to-end audit lifecycle from client acceptance to reporting"
+      ]
+    },
+    {
+      "id": "cert-2",
+      "name": "Financial Dashboard Masterclass – MS Excel",
+      "issuer": "WeGyde Pvt. Ltd.",
+      "date": "Jun 2025",
+      "learnings": [
+        "Built advanced multi-layered financial dashboards using dynamic named ranges and structured data",
+        "Mastered advanced Excel functions: INDEX/MATCH, OFFSET, INDIRECT, and array formulas",
+        "Designed interactive KPI trackers with conditional formatting, slicers, and dynamic charts",
+        "Applied dashboard design principles for management reporting and executive presentation",
+        "Automated repetitive financial reporting tasks using macro-driven Excel solutions"
+      ]
+    },
+    {
+      "id": "cert-3",
+      "name": "McKinsey Forward Program",
+      "issuer": "McKinsey & Company",
+      "date": "Jul 2025",
+      "learnings": [
+        "Developed structured problem-solving skills using McKinsey's MECE (Mutually Exclusive, Collectively Exhaustive) framework",
+        "Practised data-driven storytelling and executive-level business communication",
+        "Built skills in adaptability, resilience, and leading through ambiguity in complex environments",
+        "Gained exposure to global business strategy, digital transformation, and organisational change",
+        "Applied analytical frameworks to real-world business case studies across multiple industries"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "ananthakrishnankj7204@gmail.com",
+    "phone": "+91 860-6434-253",
+    "linkedin": "ananthakrishnan-kj",
+    "github": "Ananthakrishnan2001",
+    "location": "India",
+    "hireText": "Looking for FP&A Analyst, Business Intelligence, or Audit roles — based in India, open to relocation globally (UAE, Cyprus, UK, Singapore and beyond)."
+  },
+  "customSections": []
+}

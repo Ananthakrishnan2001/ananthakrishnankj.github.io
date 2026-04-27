@@ -1,0 +1,415 @@
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.heroInner {
+  padding: 3.5rem;
+  width: 100%;
+  background: rgba(19, 19, 28, 0.70);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(42, 42, 58, 0.8);
+  border-radius: 14px;
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.4);
+}
+
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding: 0.35rem 0.9rem;
+  /* Solid pill — no bleed-through */
+  background: rgba(14, 14, 24, 0.92);
+  border: 1px solid rgba(200, 169, 110, 0.45);
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(200, 169, 110, 0.1);
+}
+
+.pulse {
+  width: 6px; height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulseAnim 2s infinite;
+}
+
+@keyframes pulseAnim {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.heroName {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+  /* Allow wrap so card never clips the name */
+  white-space: normal;
+  word-break: keep-all;
+  padding-bottom: 0.1em;
+}
+
+.nameFirst { color: var(--text); }
+.nameLast { color: var(--accent); }
+
+.heroTitle {
+  font-size: 0.9rem;
+  color: var(--text2);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+  /* Subtle text shadow for extra legibility */
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.summaryBox {
+  background: rgba(19, 19, 28, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 2.5rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.summaryLabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.66rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.summaryText {
+  font-size: 0.9rem;
+  color: var(--text2);
+  line-height: 1.85;
+  margin: 0;
+}
+
+.heroLinks { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+.linkPrimary, .linkSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.linkPrimary { background: var(--accent); color: var(--bg); box-shadow: 0 2px 12px rgba(200,169,110,0.25); }
+.linkPrimary:hover { background: #d4b87a; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(200,169,110,0.4); }
+
+.linkSecondary {
+  background: rgba(18, 18, 28, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(90, 90, 120, 0.6);
+  color: var(--text2);
+}
+.linkSecondary:hover { border-color: var(--accent); color: var(--accent); background: rgba(24, 24, 38, 0.95); }
+
+/* ── SECTIONS ── */
+.section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 10;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.sNum { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 0.1em; }
+.sTitle { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--text); }
+.sLine { flex: 1; height: 1px; background: var(--border); }
+
+/* ── SKILLS ── */
+.skillsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+
+.skillGroup {
+  background: rgba(19, 19, 28, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  padding: 1.3rem 1.5rem;
+  border-radius: 5px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.skillGroup:hover { border-color: rgba(200,169,110,0.4); }
+
+.skillGroupTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.skillTags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* ── EXPERIENCE ── */
+.timeline {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--border);
+}
+
+.expItem {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding: 1.4rem 1.5rem 1.4rem 1.2rem;
+  border-radius: 6px;
+  background: rgba(19, 19, 28, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(42,42,58,0.7);
+  border-bottom: none;
+}
+
+.expItem:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.expDot {
+  position: absolute;
+  left: -1.6rem;
+  top: 0.45rem;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 3px rgba(200,169,110,0.2);
+}
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.expRole {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.partTimeBadge {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--text3);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.5rem;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+}
+
+.expDate { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--accent); white-space: nowrap; }
+.expCompany { font-size: 0.83rem; color: var(--accent2); margin-bottom: 0.8rem; font-weight: 500; }
+.expContext {
+  font-size: 0.84rem;
+  color: var(--text3);
+  font-style: italic;
+  margin-bottom: 0.8rem;
+  padding: 0.6rem 1rem;
+  border-left: 2px solid rgba(124,109,250,0.3);
+  background: rgba(124,109,250,0.03);
+  border-radius: 0 3px 3px 0;
+}
+
+.expBullets { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.expBullets li { font-size: 0.87rem; color: var(--text2); padding-left: 1.2rem; position: relative; line-height: 1.65; }
+.expBullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; top: 0.15rem; }
+
+/* ── PROJECTS ── */
+.projectsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+
+.projectCard {
+  background: rgba(19, 19, 28, 0.68);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.projTopBar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.projectCard:hover {
+  border-color: rgba(200,169,110,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+}
+
+.projectCard:hover .projTopBar { transform: scaleX(1); }
+
+.projTags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.85rem; }
+.projTag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.63rem;
+  color: var(--accent2);
+  background: rgba(124,109,250,0.1);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+
+.projName { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+.projDesc { font-size: 0.82rem; color: var(--text2); line-height: 1.65; margin-bottom: 1rem; flex: 1; }
+.projExplore { font-size: 0.75rem; color: var(--accent); font-family: 'DM Mono', monospace; letter-spacing: 0.04em; }
+
+/* ── CERT LIST ── */
+.certList { display: flex; flex-direction: column; gap: 0.8rem; }
+
+/* ── CUSTOM SECTIONS ── */
+.customCardsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.customCard {
+  background: rgba(19, 19, 28, 0.68);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 1.3rem 1.5rem;
+}
+.customCardTitle { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+.customCardDesc { font-size: 0.84rem; color: var(--text2); line-height: 1.65; }
+.customBullets { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.customBullets li { font-size: 0.87rem; color: var(--text2); padding-left: 1.2rem; position: relative; }
+.customBullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+
+/* ── CONTACT ── */
+.contactGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+
+.contactCard {
+  background: rgba(19, 19, 28, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 1.2rem 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s;
+}
+
+.contactCard:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+.contactIcon { font-size: 1.4rem; flex-shrink: 0; }
+.contactLabel { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--text3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.contactValue { font-size: 0.85rem; color: var(--text); font-weight: 500; word-break: break-all; }
+
+.hireBox {
+  background: rgba(200,169,110,0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(200,169,110,0.22);
+  border-radius: 6px;
+  padding: 2.2rem 2.5rem;
+  text-align: center;
+}
+
+.hireBox h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+.hireBox p { font-size: 0.88rem; color: var(--text2); margin-bottom: 1.3rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+.hireBtn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.8rem 2.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.hireBtn:hover { background: #d4b87a; transform: translateY(-1px); box-shadow: 0 5px 22px rgba(200,169,110,0.3); }
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footerRelocate {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.footerCopy {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--text3);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  .heroName { font-size: clamp(1.9rem, 9vw, 3rem); white-space: normal; }
+  .heroTitle { font-size: 0.82rem; }
+  .summaryBox { padding: 1.2rem; }
+  .skillsGrid { grid-template-columns: 1fr; }
+  .projectsGrid { grid-template-columns: 1fr; }
+  .contactGrid { grid-template-columns: 1fr; }
+  .hireBox { padding: 1.5rem; }
+  .section { padding: 3.5rem 0; }
+  .sTitle { font-size: 1.5rem; }
+  .expContext { font-size: 0.8rem; }
+}
