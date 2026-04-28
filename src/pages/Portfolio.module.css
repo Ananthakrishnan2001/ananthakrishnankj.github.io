@@ -15,6 +15,7 @@
   border: 1px solid rgba(42, 42, 58, 0.8);
   border-radius: 14px;
   box-shadow: 0 8px 48px rgba(0, 0, 0, 0.4);
+  overflow: hidden;          /* prevent name bleed on mobile */
 }
 
 
@@ -55,9 +56,9 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin-bottom: 0.4rem;
-  /* Allow wrap so card never clips the name */
   white-space: normal;
-  word-break: keep-all;
+  word-break: break-word;     /* break long single words like Ananthakrishnan */
+  overflow-wrap: break-word;
   padding-bottom: 0.1em;
 }
 
@@ -402,7 +403,13 @@
 
 /* ── MOBILE ── */
 @media (max-width: 640px) {
-  .heroName { font-size: clamp(1.9rem, 9vw, 3rem); white-space: normal; }
+  .heroInner { padding: 2rem 1.4rem; }     /* tighter card on small screens */
+  .heroName {
+    font-size: clamp(1.6rem, 8vw, 2.6rem); /* smaller so long name fits */
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
   .heroTitle { font-size: 0.82rem; }
   .summaryBox { padding: 1.2rem; }
   .skillsGrid { grid-template-columns: 1fr; }

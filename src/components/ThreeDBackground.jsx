@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useEffect, useState, Suspense } from 'react';
+import React, { useRef, useMemo, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
@@ -8,26 +8,19 @@ const TURNS = 3.5;
 const RADIUS = 0.9;
 const HEIGHT = 5;
 
-// Convert helix index to 3D position
 function helixPos(i, total, offset = 0, r = RADIUS, h = HEIGHT) {
   const t = i / (total - 1);
   const angle = t * TURNS * Math.PI * 2 + offset;
-  return new THREE.Vector3(
-    Math.cos(angle) * r,
-    (t - 0.5) * h,
-    Math.sin(angle) * r
-  );
+  return new THREE.Vector3(Math.cos(angle) * r, (t - 0.5) * h, Math.sin(angle) * r);
 }
 
-// ─── Helix Strand (instanced spheres) ────────────────────────
+// ─── Helix nodes ─────────────────────────────────────────────
 function HelixStrand({ offset, color }) {
   const meshRef = useRef();
   const dummy = useMemo(() => new THREE.Object3D(), []);
-
   const positions = useMemo(() =>
-    Array.from({ length: NODES_PER_STRAND }, (_, i) =>
-      helixPos(i, NODES_PER_STRAND, offset)
-    ), [offset]);
+    Array.from({ length: NODES_PER_STRAND }, (_, i) => helixPos(i, NODES_PER_STRAND, offset)),
+  [offset]);
 
   useEffect(() => {
     if (!meshRef.current) return;
@@ -61,64 +54,19 @@ function HelixStrand({ offset, color }) {
   );
 }
 
-// ─── Cross links (rungs of the helix ladder) ─────────────────
-function HelixRungs() {
-  const points = useMemo(() => {
-    const pts = [];
-    const stride = 3;
-    for (let i = 0; i < NODES_PER_STRAND; i += stride) {
-      const a = helixPos(i, NODES_PER_STRAND, 0);
-      const b = helixPos(i, NODES_PER_STRAND, Math.PI);
-      pts.push(a, b);
-    }
-    return pts;
-  }, []);
-
-  const geo = useMemo(() => {
-    const g = new THREE.BufferGeometry().setFromPoints(points);
-    return g;
-  }, [points]);
-
-  return (
-    <lineSegments geometry={geo} frustumCulled={false}>
-      <lineBasicMaterial color="#7c6dfa" transparent opacity={0.2} />
-    </lineSegments>
-  );
-}
-
-// ─── Strand connection lines ──────────────────────────────────
-function HelixSpine({ offset, color }) {
-  const points = useMemo(() =>
-    Array.from({ length: NODES_PER_STRAND }, (_, i) =>
-      helixPos(i, NODES_PER_STRAND, offset)
-    ), [offset]);
-
-  const geo = useMemo(() => {
-    const g = new THREE.BufferGeometry().setFromPoints(points);
-    return g;
-  }, [points]);
-
-  return (
-    <line_ geometry={geo} frustumCulled={false}>
-      <lineBasicMaterial color={color} transparent opacity={0.15} />
-    </line_>
-  );
-}
-
-// ─── Helix group with rotation ────────────────────────────────
-function DataHelix({ scrollY }) {
+// ─── Helix group — reads scrollY from a ref to avoid stale closures ───
+function DataHelix({ scrollYRef }) {
   const groupRef = useRef();
+  const lerpedScroll = useRef(0);
 
   const pos1 = useMemo(() => Array.from({ length: NODES_PER_STRAND }, (_, i) => helixPos(i, NODES_PER_STRAND, 0)), []);
   const pos2 = useMemo(() => Array.from({ length: NODES_PER_STRAND }, (_, i) => helixPos(i, NODES_PER_STRAND, Math.PI)), []);
-
   const geo1 = useMemo(() => new THREE.BufferGeometry().setFromPoints(pos1), [pos1]);
   const geo2 = useMemo(() => new THREE.BufferGeometry().setFromPoints(pos2), [pos2]);
 
   const rungPoints = useMemo(() => {
     const pts = [];
-    const stride = 3;
-    for (let i = 0; i < NODES_PER_STRAND; i += stride) {
+    for (let i = 0; i < NODES_PER_STRAND; i += 3) {
       pts.push(helixPos(i, NODES_PER_STRAND, 0));
       pts.push(helixPos(i, NODES_PER_STRAND, Math.PI));
     }
@@ -128,54 +76,53 @@ function DataHelix({ scrollY }) {
 
   useFrame((state, delta) => {
     if (!groupRef.current) return;
-    // Slow rotation
+    // Smooth lerp toward real scroll — no stale state, no reset
+    lerpedScroll.current += (scrollYRef.current - lerpedScroll.current) * Math.min(delta * 3.5, 1);
+
     groupRef.current.rotation.y += delta * 0.25;
-    // Gentle float
     groupRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.4) * 0.12;
-    // On scroll: move right + fade
-    const t = Math.min(scrollY / 500, 1);
-    groupRef.current.position.x = 2.2 + t * 3;
-    groupRef.current.scale.setScalar(1 - t * 0.5);
+
+    const t = Math.min(lerpedScroll.current / 600, 1);
+    groupRef.current.position.x = 2.2 + t * 3.5;
+    groupRef.current.scale.setScalar(1 - t * 0.55);
   });
 
   return (
     <group ref={groupRef} position={[2.2, 0, 0]}>
-      {/* Strand spines */}
       <line_ geometry={geo1} frustumCulled={false}>
         <lineBasicMaterial color="#c8a96e" transparent opacity={0.15} />
       </line_>
       <line_ geometry={geo2} frustumCulled={false}>
         <lineBasicMaterial color="#7c6dfa" transparent opacity={0.15} />
       </line_>
-
-      {/* Rungs */}
       <lineSegments geometry={rungGeo} frustumCulled={false}>
         <lineBasicMaterial color="#4ecdc4" transparent opacity={0.18} />
       </lineSegments>
-
-      {/* Nodes */}
       <HelixStrand offset={0} color="#c8a96e" />
       <HelixStrand offset={Math.PI} color="#7c6dfa" />
     </group>
   );
 }
 
-// ─── Background particle field ────────────────────────────────
-function ParticleField() {
+// ─── Galaxy: tiny distant stars ───────────────────────────────
+function StarField({ count, spread, size, color, speed }) {
   const ref = useRef();
-  const count = 80;
   const positions = useMemo(() => {
     const arr = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      arr[i * 3]     = (Math.random() - 0.5) * 16;
-      arr[i * 3 + 1] = (Math.random() - 0.5) * 10;
-      arr[i * 3 + 2] = (Math.random() - 0.5) * 6 - 2;
+      arr[i * 3]     = (Math.random() - 0.5) * spread[0];
+      arr[i * 3 + 1] = (Math.random() - 0.5) * spread[1];
+      arr[i * 3 + 2] = (Math.random() - 0.5) * spread[2] - 4;
     }
     return arr;
-  }, []);
+  }, [count, spread]);
 
-  useFrame((_, delta) => {
-    if (ref.current) ref.current.rotation.y += delta * 0.012;
+  const phase = useMemo(() => Math.random() * Math.PI * 2, []);
+
+  useFrame((state, delta) => {
+    if (!ref.current) return;
+    ref.current.rotation.y += delta * speed;
+    ref.current.material.opacity = 0.35 + 0.2 * Math.sin(state.clock.elapsedTime * 0.6 + phase);
   });
 
   return (
@@ -183,27 +130,57 @@ function ParticleField() {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
-      <pointsMaterial color="#c8a96e" size={0.028} sizeAttenuation transparent opacity={0.45} depthWrite={false} />
+      <pointsMaterial color={color} size={size} sizeAttenuation transparent opacity={0.4} depthWrite={false} />
+    </points>
+  );
+}
+
+// ─── Galaxy: nebula cluster blobs ────────────────────────────
+function NebulaCluster({ center, color, count = 30, spread = 2 }) {
+  const ref = useRef();
+  const positions = useMemo(() => {
+    const arr = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      arr[i * 3]     = center[0] + (Math.random() - 0.5) * spread;
+      arr[i * 3 + 1] = center[1] + (Math.random() - 0.5) * spread;
+      arr[i * 3 + 2] = center[2] + (Math.random() - 0.5) * spread * 0.4;
+    }
+    return arr;
+  }, [center, count, spread]);
+
+  const phase = useMemo(() => Math.random() * Math.PI * 2, []);
+  useFrame((state, delta) => {
+    if (!ref.current) return;
+    ref.current.rotation.y += delta * 0.004;
+    ref.current.material.opacity = 0.22 + 0.12 * Math.sin(state.clock.elapsedTime * 0.45 + phase);
+  });
+
+  return (
+    <points ref={ref} frustumCulled={false}>
+      <bufferGeometry>
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+      </bufferGeometry>
+      <pointsMaterial color={color} size={0.14} sizeAttenuation transparent opacity={0.28} depthWrite={false} />
     </points>
   );
 }
 
 // ─── Main export ──────────────────────────────────────────────
 export default function ThreeDBackground() {
-  const [scrollY, setScrollY] = useState(0);
+  const scrollYRef = useRef(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isLowEnd, setIsLowEnd] = useState(false);
 
   useEffect(() => {
     const checkDevice = () => {
       setIsMobile(window.innerWidth < 768);
-      // Disable on low-end hardware (< 4 logical cores)
       setIsLowEnd(navigator.hardwareConcurrency < 4);
     };
     checkDevice();
     window.addEventListener('resize', checkDevice);
 
-    const onScroll = () => setScrollY(window.scrollY);
+    // Write to ref — no setState, no re-renders, no stale closures
+    const onScroll = () => { scrollYRef.current = window.scrollY; };
     window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => {
@@ -222,8 +199,19 @@ export default function ThreeDBackground() {
         dpr={Math.min(window.devicePixelRatio, 1.5)}
         frameloop="always"
       >
-        <DataHelix scrollY={scrollY} />
-        <ParticleField />
+        {/* Galaxy star layers */}
+        <StarField count={350} spread={[28, 18, 10]} size={0.012} color="#c8d8ff" speed={0.0004} />
+        <StarField count={120} spread={[22, 14, 8]}  size={0.028} color="#ffffff"  speed={0.0003} />
+        <StarField count={70}  spread={[18, 12, 6]}  size={0.020} color="#c8a96e"  speed={0.0005} />
+        <StarField count={50}  spread={[16, 10, 5]}  size={0.018} color="#7c6dfa"  speed={0.0002} />
+
+        {/* Nebula clusters */}
+        <NebulaCluster center={[-5, 2, -4]}  color="#7c6dfa" count={35} spread={2.2} />
+        <NebulaCluster center={[5, -3, -3]}  color="#c8a96e" count={28} spread={1.8} />
+        <NebulaCluster center={[-2, -4, -5]} color="#4ecdc4" count={22} spread={1.5} />
+
+        {/* DNA Helix */}
+        <DataHelix scrollYRef={scrollYRef} />
       </Canvas>
     </div>
   );
