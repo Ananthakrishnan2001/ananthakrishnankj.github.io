@@ -7,10 +7,26 @@
     "summary": "ACCA Part-Qualified professional (10/13 papers passed) with external audit experience at Baker Tilly ASA, contributing to financial statement audits for European clients across shipping, investment holding, and retail sectors. Skilled in financial data analysis, variance analysis, and management reporting, with hands-on experience building financial dashboards and reports in Power BI and Excel. Exposure to ledger-level data cleaning, structured financial documentation, and IFRS-based reporting. Keen to apply analytical and data visualisation skills in a Financial Planning & Analysis or Business Intelligence capacity.",
     "relocateText": "🌍 Open to relocation and remote work globally — UAE · Cyprus · UK · Singapore",
     "links": [
-      { "label": "✉ Hire Me", "url": "mailto:ananthakrishnankj7204@gmail.com", "primary": true },
-      { "label": "LinkedIn", "url": "https://linkedin.com/in/ananthakrishnan-kj", "primary": false },
-      { "label": "GitHub", "url": "https://github.com/Ananthakrishnan2001", "primary": false },
-      { "label": "Download CV", "url": "/Ananthakrishnan_KJ_CV_2026.pdf", "primary": false }
+      {
+        "label": "✉ Hire Me",
+        "url": "mailto:kj.ananthakrishnan2001@gmail.com",
+        "primary": true
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/ananthakrishnan-kj",
+        "primary": false
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Ananthakrishnan2001",
+        "primary": false
+      },
+      {
+        "label": "Download CV",
+        "url": "/Ananthakrishnan_KJ_CV_2026.pdf",
+        "primary": false
+      }
     ]
   },
   "skills": [
@@ -18,37 +34,76 @@
       "id": "sk-1",
       "category": "Data & Visualisation",
       "icon": "BarChart2",
-      "items": ["Power BI", "DAX", "Data Modelling", "Excel (Advanced)", "Pivot Tables", "Data Storytelling"]
+      "items": [
+        "Power BI",
+        "DAX",
+        "Data Modelling",
+        "Excel (Advanced)",
+        "Pivot Tables",
+        "Data Storytelling"
+      ]
     },
     {
       "id": "sk-2",
       "category": "Financial Analysis",
       "icon": "TrendingUp",
-      "items": ["Variance Analysis", "Analytical Review", "Management Reporting", "IFRS", "Financial Statements", "Investment Appraisal", "Business Valuation", "Management Accounting"]
+      "items": [
+        "Variance Analysis",
+        "Analytical Review",
+        "Management Reporting",
+        "IFRS",
+        "Financial Statements",
+        "Investment Appraisal",
+        "Business Valuation",
+        "Management Accounting"
+      ]
     },
     {
       "id": "sk-3",
       "category": "Audit & Assurance",
       "icon": "Shield",
-      "items": ["External Audit", "ISA Compliance", "Substantive Testing", "Working Papers", "Risk Assessment", "Revenue Testing", "Cross-border Audit"]
+      "items": [
+        "External Audit",
+        "ISA Compliance",
+        "Substantive Testing",
+        "Working Papers",
+        "Risk Assessment",
+        "Revenue Testing",
+        "Cross-border Audit"
+      ]
     },
     {
       "id": "sk-4",
       "category": "Taxation & Compliance",
       "icon": "FileText",
-      "items": ["Direct Taxation", "Indirect Taxation", "Corporate Law", "Regulatory Compliance"]
+      "items": [
+        "Direct Taxation",
+        "Indirect Taxation",
+        "Corporate Law",
+        "Regulatory Compliance"
+      ]
     },
     {
       "id": "sk-5",
       "category": "Automation & Data Engineering",
       "icon": "Code2",
-      "items": ["Power Automate", "Python (Basic)", "Data Cleaning", "Ledger Reconciliation", "Structured Problem Solving"]
+      "items": [
+        "Power Automate",
+        "Python (Basic)",
+        "Data Cleaning",
+        "Ledger Reconciliation",
+        "Structured Problem Solving"
+      ]
     },
     {
       "id": "sk-6",
       "category": "Languages",
       "icon": "Globe",
-      "items": ["English", "Malayalam", "Hindi"]
+      "items": [
+        "English",
+        "Malayalam",
+        "Hindi"
+      ]
     }
   ],
   "experience": [
@@ -91,28 +146,129 @@
     "avgScore": 68.8,
     "allFirstAttempt": true,
     "status": "SBL — Jun 2026",
-    "specialMentions": ["SBR", "AAA", "AFM"],
+    "specialMentions": [
+      "SBR",
+      "AAA",
+      "AFM"
+    ],
     "papers": [
-      { "code": "BT", "name": "Business and Technology", "level": "Knowledge", "status": "pending", "score": null, "attempt": null },
-      { "code": "MA", "name": "Management Accounting", "level": "Knowledge", "status": "passed", "score": null, "attempt": 1 },
-      { "code": "FA", "name": "Financial Accounting", "level": "Knowledge", "status": "passed", "score": null, "attempt": 1 },
-      { "code": "LW", "name": "Corporate & Business Law", "level": "Skills", "status": "pending", "score": null, "attempt": null },
-      { "code": "PM", "name": "Performance Management", "level": "Skills", "status": "passed", "score": null, "attempt": 1 },
-      { "code": "TX", "name": "Taxation", "level": "Skills", "status": "passed", "score": null, "attempt": 1, "note": "Highest Score" },
-      { "code": "FR", "name": "Financial Reporting", "level": "Skills", "status": "passed", "score": null, "attempt": 1 },
-      { "code": "AA", "name": "Audit and Assurance", "level": "Skills", "status": "passed", "score": null, "attempt": 1 },
-      { "code": "FM", "name": "Financial Management", "level": "Skills", "status": "passed", "score": null, "attempt": 1 },
-      { "code": "SBL", "name": "Strategic Business Leader", "level": "Strategic", "status": "upcoming", "score": null, "attempt": null, "note": "Jun 2026" },
-      { "code": "SBR", "name": "Strategic Business Reporting", "level": "Strategic", "status": "passed", "score": null, "attempt": 1 },
-      { "code": "AFM", "name": "Advanced Financial Management", "level": "Strategic", "status": "passed", "score": 56, "attempt": 1 },
-      { "code": "AAA", "name": "Advanced Audit & Assurance", "level": "Strategic", "status": "passed", "score": null, "attempt": 1 }
+      {
+        "code": "BT",
+        "name": "Business and Technology",
+        "level": "Knowledge",
+        "status": "pending",
+        "score": null,
+        "attempt": null
+      },
+      {
+        "code": "MA",
+        "name": "Management Accounting",
+        "level": "Knowledge",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      },
+      {
+        "code": "FA",
+        "name": "Financial Accounting",
+        "level": "Knowledge",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      },
+      {
+        "code": "LW",
+        "name": "Corporate & Business Law",
+        "level": "Skills",
+        "status": "pending",
+        "score": null,
+        "attempt": null
+      },
+      {
+        "code": "PM",
+        "name": "Performance Management",
+        "level": "Skills",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      },
+      {
+        "code": "TX",
+        "name": "Taxation",
+        "level": "Skills",
+        "status": "passed",
+        "score": null,
+        "attempt": 1,
+        "note": "Highest Score"
+      },
+      {
+        "code": "FR",
+        "name": "Financial Reporting",
+        "level": "Skills",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      },
+      {
+        "code": "AA",
+        "name": "Audit and Assurance",
+        "level": "Skills",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      },
+      {
+        "code": "FM",
+        "name": "Financial Management",
+        "level": "Skills",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      },
+      {
+        "code": "SBL",
+        "name": "Strategic Business Leader",
+        "level": "Strategic",
+        "status": "upcoming",
+        "score": null,
+        "attempt": null,
+        "note": "Jun 2026"
+      },
+      {
+        "code": "SBR",
+        "name": "Strategic Business Reporting",
+        "level": "Strategic",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      },
+      {
+        "code": "AFM",
+        "name": "Advanced Financial Management",
+        "level": "Strategic",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      },
+      {
+        "code": "AAA",
+        "name": "Advanced Audit & Assurance",
+        "level": "Strategic",
+        "status": "passed",
+        "score": null,
+        "attempt": 1
+      }
     ]
   },
   "projects": [
     {
       "id": "proj-1",
       "name": "Sales Performance Dashboard",
-      "tags": ["Power BI", "DAX", "Excel"],
+      "tags": [
+        "Power BI",
+        "DAX",
+        "Excel"
+      ],
       "description": "Interactive Power BI dashboard tracking revenue trends, product performance, and regional sales KPIs with dynamic filtering and drill-through capabilities.",
       "details": "This interactive dashboard allows management to drill down into regional sales figures, spot underperforming products, and optimise inventory distribution. The DAX models ensure quick load times despite processing large volumes of transactional data. Built for a private company — client data is proprietary.",
       "embedUrl": "",
@@ -123,7 +279,11 @@
     {
       "id": "proj-2",
       "name": "Student Performance Dashboard",
-      "tags": ["Power BI", "Excel", "Analytics"],
+      "tags": [
+        "Power BI",
+        "Excel",
+        "Analytics"
+      ],
       "description": "Comprehensive analytics dashboard tracking student KPIs, attendance patterns, and performance trends to enable data-driven decisions for academic management.",
       "details": "Tracking academic outcomes and attendance data in real-time, this dashboard acts as a central hub for educators to identify at-risk students and deploy timely interventions. Designed for scalability across multiple cohorts and subject areas.",
       "embedUrl": "",
@@ -134,7 +294,11 @@
     {
       "id": "proj-3",
       "name": "Automated Student Communication Workflow",
-      "tags": ["Power Automate", "Excel", "Outlook"],
+      "tags": [
+        "Power Automate",
+        "Excel",
+        "Outlook"
+      ],
       "description": "Automated workflow distributing 500+ personalised emails with pagination logic, concurrency controls, and status-tracking to prevent duplicate communications.",
       "details": "Replaced a manual 8-hour process with an automated workflow running in under 5 minutes. Logic includes pagination to address API row limitations, concurrency controls to prevent data file-locking issues, and a status-tracking mechanism to update records upon successful delivery — maintaining a reliable process audit trail.",
       "embedUrl": "",
@@ -151,7 +315,13 @@
       "date": "Sep 2023 – Sep 2026",
       "status": "In Progress · 5th Semester",
       "description": "Currently in 5th semester (4th semester completed). Building a strong academic foundation alongside professional ACCA qualification and work experience.",
-      "modules": ["Financial Accounting", "Taxation", "Business Law", "Management", "Cost Accounting"]
+      "modules": [
+        "Financial Accounting",
+        "Taxation",
+        "Business Law",
+        "Management",
+        "Cost Accounting"
+      ]
     },
     {
       "id": "edu-2",
@@ -160,7 +330,12 @@
       "date": "Jan 2021 – Sep 2022",
       "status": "Completed",
       "description": "Developed a strong analytical and behavioural foundation that enhances client interaction, professional communication, and structured problem-solving in finance and audit contexts.",
-      "modules": ["Behavioural Analysis", "Research Methods", "Cognitive Psychology", "Statistics"]
+      "modules": [
+        "Behavioural Analysis",
+        "Research Methods",
+        "Cognitive Psychology",
+        "Statistics"
+      ]
     },
     {
       "id": "edu-3",
@@ -169,7 +344,13 @@
       "date": "2017 – 2019",
       "status": "Completed",
       "description": "Developed strong quantitative reasoning and analytical skills through a rigorous mathematics curriculum.",
-      "modules": ["Mathematics", "Biology", "Chemistry", "Physics", "English"]
+      "modules": [
+        "Mathematics",
+        "Biology",
+        "Chemistry",
+        "Physics",
+        "English"
+      ]
     }
   ],
   "certifications": [
@@ -214,7 +395,7 @@
     }
   ],
   "contact": {
-    "email": "ananthakrishnankj7204@gmail.com",
+    "email": "kj.ananthakrishnan2001@gmail.com",
     "phone": "+91 860-6434-253",
     "linkedin": "ananthakrishnan-kj",
     "github": "Ananthakrishnan2001",
