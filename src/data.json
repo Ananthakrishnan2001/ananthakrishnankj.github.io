@@ -73,17 +73,6 @@
       ]
     },
     {
-      "id": "sk-4",
-      "category": "Taxation & Compliance",
-      "icon": "FileText",
-      "items": [
-        "Direct Taxation",
-        "Indirect Taxation",
-        "Corporate Law",
-        "Regulatory Compliance"
-      ]
-    },
-    {
       "id": "sk-5",
       "category": "Automation & Data Engineering",
       "icon": "Code2",
