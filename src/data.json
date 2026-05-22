@@ -25,7 +25,7 @@
       {
         "label": "Download CV",
         "url": "/Ananthakrishnan_KJ_CV_2026.pdf",
-        "primary": false
+        "primary": true
       }
     ]
   },
@@ -70,6 +70,17 @@
         "Risk Assessment",
         "Revenue Testing",
         "Cross-border Audit"
+      ]
+    },
+    {
+      "id": "sk-4",
+      "category": "Taxation & Compliance",
+      "icon": "FileText",
+      "items": [
+        "Direct Taxation",
+        "Indirect Taxation",
+        "Corporate Law",
+        "Regulatory Compliance"
       ]
     },
     {
