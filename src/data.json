@@ -15,12 +15,12 @@
       {
         "label": "LinkedIn",
         "url": "https://linkedin.com/in/ananthakrishnan-kj",
-        "primary": false
+        "primary": true
       },
       {
         "label": "GitHub",
         "url": "https://github.com/Ananthakrishnan2001",
-        "primary": false
+        "primary": true
       },
       {
         "label": "Download CV",
