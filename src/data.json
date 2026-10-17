@@ -3,8 +3,8 @@
     "nameFirst": "Ananthakrishnan",
     "nameLast": "KJ",
     "tagline": "Available for opportunities",
-    "title": "Management Trainee · Baker Tilly ASA  |  ACCA Part-Qualified  |  Finance & Data",
-    "summary": "ACCA Part-Qualified professional (10/13 papers passed) with external audit experience at Baker Tilly ASA, contributing to financial statement audits for European clients across shipping, investment holding, and retail sectors. Skilled in financial data analysis, variance analysis, and management reporting, with hands-on experience building financial dashboards and reports in Power BI and Excel. Exposure to ledger-level data cleaning, structured financial documentation, and IFRS-based reporting. Keen to apply analytical and data visualisation skills in a Financial Planning & Analysis or Business Intelligence capacity.",
+    "title": "Management Trainee · Baker Tilly ASA  |  ACCA Affiliate  |  Finance & Data",
+    "summary": "ACCA Qualified professional (13/13 papers passed) with external audit experience at Baker Tilly ASA, contributing to financial statement audits for European clients across shipping, investment holding, and retail sectors. Skilled in financial data analysis, variance analysis, and management reporting, with hands-on experience building financial dashboards and reports in Power BI and Excel. Exposure to ledger-level data cleaning, structured financial documentation, and IFRS-based reporting. Keen to apply analytical and data visualisation skills in a Financial Planning & Analysis or Business Intelligence capacity.",
     "relocateText": "🌍 Open to relocation and remote work globally — UAE · Cyprus · UK · Singapore",
     "links": [
       {
@@ -15,17 +15,17 @@
       {
         "label": "LinkedIn",
         "url": "https://linkedin.com/in/ananthakrishnan-kj",
-        "primary": true
+        "primary": false
       },
       {
         "label": "GitHub",
         "url": "https://github.com/Ananthakrishnan2001",
-        "primary": true
+        "primary": false
       },
       {
         "label": "Download CV",
         "url": "/Ananthakrishnan_KJ_CV_2026.pdf",
-        "primary": true
+        "primary": false
       }
     ]
   },
@@ -139,13 +139,13 @@
     }
   ],
   "acca": {
-    "title": "ACCA Part-Qualified",
-    "subtitle": "Registered October 2023 · Appearing for SBL – June 2026",
-    "totalPassed": 10,
+    "title": "ACCA Qualified",
+    "subtitle": "Registered October 2023 · ",
+    "totalPassed": 13,
     "totalPapers": 13,
     "avgScore": 68.8,
     "allFirstAttempt": true,
-    "status": "SBL — Jun 2026",
+    "status": "Affilate",
     "specialMentions": [
       "SBR",
       "AAA",
@@ -156,7 +156,7 @@
         "code": "BT",
         "name": "Business and Technology",
         "level": "Knowledge",
-        "status": "pending",
+        "status": "passed",
         "score": null,
         "attempt": null
       },
@@ -180,7 +180,7 @@
         "code": "LW",
         "name": "Corporate & Business Law",
         "level": "Skills",
-        "status": "pending",
+        "status": "passed",
         "score": null,
         "attempt": null
       },
@@ -199,7 +199,7 @@
         "status": "passed",
         "score": null,
         "attempt": 1,
-        "note": "Highest Score"
+        "note": ""
       },
       {
         "code": "FR",
@@ -229,10 +229,10 @@
         "code": "SBL",
         "name": "Strategic Business Leader",
         "level": "Strategic",
-        "status": "upcoming",
+        "status": "passed",
         "score": null,
         "attempt": null,
-        "note": "Jun 2026"
+        "note": ""
       },
       {
         "code": "SBR",
@@ -314,7 +314,7 @@
       "institution": "Sree Narayana Guru Open University",
       "date": "Sep 2023 – Sep 2026",
       "status": "In Progress · 5th Semester",
-      "description": "Currently in 5th semester (4th semester completed). Building a strong academic foundation alongside professional ACCA qualification and work experience.",
+      "description": "Currently in 6th semester (3 year program). Building a strong academic foundation alongside professional ACCA qualification and work experience.",
       "modules": [
         "Financial Accounting",
         "Taxation",
@@ -396,7 +396,7 @@
   ],
   "contact": {
     "email": "kj.ananthakrishnan2001@gmail.com",
-    "phone": "+91 628-2434-253",
+    "phone": "+91 860-6434-253",
     "linkedin": "ananthakrishnan-kj",
     "github": "Ananthakrishnan2001",
     "location": "India",
